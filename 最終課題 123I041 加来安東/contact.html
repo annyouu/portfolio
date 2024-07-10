@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ</title>
+  <link rel="stylesheet" href="css4/style.css">
+</head>
+<body>
+  <div class="first">
+    <h1>お問い合わせ</h1>
+    <ol class="breadcrumb">
+      <li>
+        <a href="index.html">ホーム</a>
+        <meta intemprop="position" content="1" />
+      </li>
+
+      <li>
+        <a href="contact.html">お問い合わせ</a>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+    <p></p>
+  </div>
+
+  <div class="inquiry">
+   <form action="">
+    <table class="inquiry-table">
+      <tr>
+        <th class="inquiry-item">名前</th>
+        <td class="inquiry-body"><input type="text" name="名前" class="form-text">
+        </td>
+      </tr>
+      <tr>
+        <th class="inquiry-item">性別</th>
+        <td class="inquiry-body">
+          <label class="contact-body">
+            <input type="radio" name="性別">
+            <span class="contact-sex-txt">男</span>
+          </label>
+          <label class="contact-body">
+            <input type="radio" name="性別">
+            <span class="contact-sex-txt">女</span>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <th class="inquiry-item">メール</th>
+        <td class="inquiry-body">
+          <input type="email" name="メール" class="form-text">
+        </td>
+      </tr>
+      <tr>
+        <th class="inquiry-item">電話番号</th>
+        <td class="inquiry-body">
+          <input type="tel" name="電話" class="form-text">
+        </td>
+      </tr>
+      <tr>
+        <th class="inquiry-item">お問い合わせ内容</th>
+        <td class="inquiry-body">
+          <textarea name="問い合わせ" 
+          placeholder="お問い合わせはこちらにお願い申し上げます"
+          class="form-textarea"></textarea>
+        </td>
+      </tr>
+    </table>
+    <input class="inquiry-submit" type="submit" value="送信">
+   </form>
+  </div>
+
+  <footer class="footer">
+    <p class="copyright">© 2024 Example Inc. All Rights Reserved.</p>
+    <ul class="md-flex">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="sitemap.html">サイトマップ</a></li>
+      <li><a href="privacy.html">プライバシーポリシー</a></li>
+    </ul>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,556 @@
+ @charset "utf-8";
+
+
+
+ body {
+   margin: 0;
+   font-family: 'Exo', sans-serif;
+   padding: 0;
+   max-width: 100%;
+ }
+
+    /* * {   
+  outline: solid 2px blue;
+ }  */
+  
+
+ header {
+   display: flex;
+   border: solid 2px #ddd;
+   background: #ddd;
+   margin: 30px;
+   border-radius: 10px;
+   position: relative;
+   top: -15px;
+ }
+
+ img {
+   margin: 0;
+   padding: 0;
+   position: relative;
+   left: 20px;
+   top: 4px;
+   mix-blend-mode: multiply;
+   cursor: pointer;
+ }
+
+ h1 {
+   font-size: 26px;
+   padding-left: 20px;
+   cursor: pointer;
+ }
+
+ .context {
+   width: 100%;
+ }
+
+
+ .context h3 {
+   text-align: center;
+   padding-top: 100px;
+   font-size: 50px;
+   position: absolute;
+   top: 200px;
+   left: 350px;
+   color: white;
+ }
+
+ p {
+   border: solid 2px white;
+   width: 100%;
+   position: absolute;
+   top: 700px;
+ }
+
+ 
+
+ .product a {
+   margin: 0;
+   border: solid 1px black;
+   padding: 5px 10px;
+   position: absolute;
+   top: 500px;
+ }
+
+
+
+
+ ul {
+   list-style: none;
+   margin: 0;
+   padding-top: 26px;
+   padding-left: 100px;
+   display: flex;
+   gap: 50px;
+ }
+
+ ul li a {
+   text-decoration: none;
+   color: black;
+   border: solid 1px #ddd;
+   padding: 10px 20px;
+   border-radius: 6px;
+ }
+
+ ul li a:hover {
+   background-color: black;
+   color: white;
+ }
+
+ li a {
+   text-decoration: none;
+   color: black;
+   margin: 0;
+   padding: 0;
+ }
+
+ .product a {
+  text-decoration: none;
+   border: solid 1px blue;
+   background-color: blue;
+   padding: 5px 10px;
+   border-radius: 8px;
+   color: white;
+   z-index: 1;
+   position: absolute;
+   top: 1150px;
+   left: 240px;
+ }
+
+ 
+
+ .sp-menu {
+   position: absolute;
+   top: 17px;
+   right: 70px;
+ }
+
+ .sp-menu #open {
+   font-size: 40px;
+   cursor: pointer;
+ }
+
+ .sp-menu #open.hide {
+   display: none;
+ }
+
+ .overlay {
+   overflow: hidden;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background: rgba(255, 255, 255, 0.95);
+   text-align: center;
+   padding: 64px;
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity .6s;
+ }
+
+ .overlay a {
+   display: block;
+ }
+
+ .overlay.show {
+   opacity: 1;
+   pointer-events: auto;
+ }
+
+ .overlay #close {
+   position: absolute;
+   top: 16px;
+   right: 16px;
+   font-size: 32px;
+   cursor: pointer;
+ }
+
+ .overlay ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+
+ .overlay li {
+   margin-top: 24px;
+   opacity: 0;
+   transform: translateY(16px);
+   transition: opacity .3s, transform .3s;
+ }
+
+ .overlay.show li {
+   opacity: 1;
+   transform: none;
+ }
+
+ .overlay.show li:nth-child(1) {
+   transition-delay: .1s;
+ }
+
+ .overlay.show li:nth-child(2) {
+   transition-delay: .2s;
+ }
+
+ .overlay.show li:nth-child(3) {
+   transition-delay: .3s;
+ }
+
+ .overlay.show li:nth-child(4) {
+  transition-delay: .4s;
+}
+
+
+
+ 
+
+ @media (max-width: 1151px) {
+   .sp-menu {
+     display: block;
+   }
+ }
+
+
+
+ @media (max-width: 1150px) {
+   header a {
+     display: none;
+   }
+ }
+
+ h7 {
+  position: absolute;
+   top: 4000px;
+ }
+
+ .area {
+   background: #4e54c8;
+   background: linear-gradient(to left, #8f94fb, #4e54c8);
+   width: 100%;
+   height: 500px;
+   margin-top: 35px;
+ }
+
+
+
+ .squares li:nth-child(1) {
+   background: #fff;
+   border-radius: 8px;
+   width: 70px;
+   height: 70px;
+   position: absolute;
+   bottom: -280px;
+   /* 要修正*/
+   aspect-ratio: 1 / 1;
+   animation: 10s linear 2s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(2) {
+   background: #fff;
+   border-radius: 8px;
+   width: 50px;
+   height: 50px;
+   position: absolute;
+   bottom: -260px;
+   /* 要修正*/
+   left: 50px;
+   aspect-ratio: 1 / 1;
+   animation: 8s linear 1s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(3) {
+   background: #fff;
+   border-radius: 8px;
+   width: 40px;
+   height: 40px;
+   position: absolute;
+   bottom: -270px;
+   /* 要修正*/
+   left: 200px;
+   aspect-ratio: 1 / 1;
+   animation: 4s linear 1s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(4) {
+   background: #fff;
+   border-radius: 8px;
+   width: 80px;
+   height: 80px;
+   position: absolute;
+   bottom: -280px;
+   /* 要修正*/
+   left: 500px;
+   aspect-ratio: 1 / 1;
+   animation: 16s linear 2s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(5) {
+   background: #fff;
+   border-radius: 8px;
+   width: 70px;
+   height: 70px;
+   position: absolute;
+   bottom: -280px;
+   /* 要修正*/
+   left: 700px;
+   aspect-ratio: 1 / 1;
+   animation: 12s linear 1s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(6) {
+   background: #fff;
+   border-radius: 8px;
+   width: 60px;
+   height: 60px;
+   position: absolute;
+   bottom: -280px;
+   /* 要修正*/
+   left: 360px;
+   aspect-ratio: 1 / 1;
+   animation: 8s linear 1s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(7) {
+   background: #fff;
+   border-radius: 8px;
+   width: 80px;
+   height: 80px;
+   position: absolute;
+   bottom: -280px;
+   /* 要修正*/
+   left: 540px;
+   aspect-ratio: 1 / 1;
+   animation: 9s linear 1s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(8) {
+   background: #fff;
+   border-radius: 8px;
+   width: 90px;
+   height: 90px;
+   position: absolute;
+   bottom: -280px;
+   /* 要修正*/
+   left: 400px;
+   aspect-ratio: 1 / 1;
+   animation: 12s linear 2s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(9) {
+   background: #fff;
+   border-radius: 8px;
+   width: 50px;
+   height: 50px;
+   position: absolute;
+   bottom: -280px;
+   /* 要修正*/
+   left: 260px;
+   aspect-ratio: 1 / 1;
+   animation: 8s linear 2s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(10) {
+   background: #fff;
+   border-radius: 8px;
+   width: 100px;
+   height: 100px;
+   position: absolute;
+   bottom: -300px;
+   /* 要修正*/
+   left: 900px;
+   aspect-ratio: 1 / 1;
+   animation: 15s linear 1s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(11) {
+   background: #fff;
+   border-radius: 8px;
+   width: 50px;
+   height: 50px;
+   position: absolute;
+   bottom: -280px;
+   /* 要修正*/
+   left: 620px;
+   aspect-ratio: 1 / 1;
+   animation: 6s linear 2s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(12) {
+   background: #fff;
+   border-radius: 8px;
+   width: 70px;
+   height: 70px;
+   position: absolute;
+   bottom: -280px;
+   /* 要修正*/
+   left: 380px;
+   aspect-ratio: 1 / 1;
+   animation: 6s linear 1s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(13) {
+   background: #fff;
+   border-radius: 8px;
+   width: 30px;
+   height: 30px;
+   position: absolute;
+   bottom: -270px;
+   /* 要修正*/
+   left: 1000px;
+   aspect-ratio: 1 / 1;
+   animation: 3s linear 1s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(14) {
+   background: #fff;
+   border-radius: 8px;
+   width: 20px;
+   height: 20px;
+   position: absolute;
+   bottom: -270px;
+   left: 1120px;
+   aspect-ratio: 1 / 1;
+   animation: 5s linear 1s infinite square-rise;
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+
+ .squares li:nth-child(15) {
+   background: #fff;
+   border-radius: 8px;
+   width: 75px;
+   height: 75px;
+   position: absolute;
+   bottom: -270px;
+   left: 1150px;
+   aspect-ratio: 1 / 1;
+   animation: 11s linear 1s infinite square-rise;
+
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(16) {
+   background: #fff;
+   border-radius: 8px;
+   width: 85px;
+   height: 85px;
+   position: absolute;
+   bottom: -270px;
+   /* 要修正*/
+   left: 1050px;
+   aspect-ratio: 1 / 1;
+   animation: 13s linear 2s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ .squares li:nth-child(17) {
+   background: #fff;
+   border-radius: 8px;
+   width: 60px;
+   height: 60px;
+   position: absolute;
+   bottom: -270px;
+   /* 要修正*/
+   left: 800px;
+   aspect-ratio: 1 / 1;
+   animation: 8s linear 4s infinite square-rise;
+   /* 4秒かけて1サイクル完了 linear 加速 等速で 1s アニメーションの遅らせる時間 infinite 無限に繰り返す*/
+   transition-timing-function: ease-in;
+   opacity: 0.2;
+ }
+
+ @keyframes square-rise {
+   0% {
+     transform: translateY(0px) rotate(700deg);
+   }
+
+   50% {
+     opacity: 0.1;
+   }
+
+   100% {
+     transform: translateY(-830px);
+     opacity: 0;
+   }
+ }
+
+ 
+.end footer p {
+  text-align: center;
+  position: relative;
+  top: -15px;
+}
+
+
+
+.end footer ul {
+  position: aboslute;
+  left: 400px;
+  top: -500px;
+  display: flex;
+  gap: 70px;
+  list-style: none;
+  padding: 0;
+  margin-left: 495px;
+  cursor: pointer;
+}
+
+.end footer li:hover {
+  color: black;
+}
+
+.end footer {
+  padding: 2px;
+  font-size: 15px;
+  color: #999;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  position: relative;
+  top: 500px;
+}
+
+
+ 

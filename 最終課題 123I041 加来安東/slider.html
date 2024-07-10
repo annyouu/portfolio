@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スライドショー</title>
+  <link rel="stylesheet" href="csssh/style.css">
+</head>
+<body>
+  <ol class="breadcrumb">
+    <li>
+      <a href="index.html">ホーム</a>
+      <meta intemprop="position" content="1" />
+    </li>
+
+    <li>
+      <a href="product.html">制作物</a>
+      <meta itemprop="position" content="2" />
+    </li>
+    <li>
+      <a href="slider.html">スライドショー</a>
+      <meta itemprop="position" content="3" />
+    </li>
+  </ol>
+  <main>
+    <img src="image sh/pic1.png" width="256" height="192" id="main-image">
+
+    <div class="container">
+    <button id="prev">←</button>
+    <button id="next">→</button>
+    </div>
+
+    <div class="container">
+    <img src="image sh/pic1.png" width="80" height="60" class="thumbnail active">
+    <img src="image sh/pic2.png" width="80" height="60" class="thumbnail">
+    <img src="image sh/pic3.png" width="80" height="60" class="thumbnail">
+    </div>
+  </main>
+  <script src="js5/main.js"></script>
+</body>
+</html>

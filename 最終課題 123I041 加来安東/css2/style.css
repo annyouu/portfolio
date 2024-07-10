@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+body {
+  font-family: 'Arial', YuGothic, 'Yu Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'ＭＳゴシック', sans-serif;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 1em;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 2em;
+  border: 4px double black;
+  border-radius: 15px;
+  text-align: center;
+  color: black;
+  background: #ccc;
+}
+
+.breadcrumb {
+  list-style-type: none;
+  margin-left: 26px;
+  padding: 0px;
+  display: flex;
+  position: absolute;
+  top: 102px;
+}
+
+.breadcrumb li::after {
+  content: ">";
+  margin: 0 10px;
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: black;
+}
+
+.first p {
+  border-bottom: dashed 2px #238264;
+  margin-bottom: 80px;
+  margin-top: -6px;
+}
+
+
+.content p {
+  position:absolute;
+  top: 70px;
+  left: 320px;
+}
+
+.content2 p {
+  position:absolute;
+  top: 70px;
+  left: 260px;
+}
+
+.content3 p {
+  position:absolute;
+  top: 70px;
+  left: 200px;
+}
+
+
+.skills2 {
+  position: relative;
+  right: 1300px;
+  display: flex;
+  gap: 330px;
+  border: solid 1px #bbb;
+  margin: 100px 100px 20px 100px;
+  background-color: #bbb;
+  border-radius: 110px 0 110px 0;
+  animation: 0.3s linear 0.2s  forwards fadeIn;
+}
+
+.skills2 img {
+  padding: 20px;
+}
+
+.skills2 p {
+  font-size: 20px;
+}
+
+
+.skills3 {
+  position: relative;
+  bottom: -10px;
+  right: 1300px;
+  display: flex;
+  gap: 330px;
+  border: solid 1px #ccc;
+  margin: 100px 100px 20px 100px;
+  background-color: #ccc;
+  border-radius: 110px 0 110px 0;
+  animation: 0.4s linear 0.3s  forwards fadeIn;
+}
+
+.skills3 img {
+  padding : 20px;
+}
+
+.skills3 p {
+  font-size: 20px;
+}
+
+.skills4 {
+  position: relative;
+  bottom: -10px;
+  right: 1300px;
+  display: flex;
+  gap: 330px;
+  border: solid 1px #ddd;
+  margin: 100px 100px 20px 100px;
+  background-color: #ddd;
+  border-radius: 110px 0 110px 0;
+  margin-bottom: 150px;
+  animation: 0.5s linear 0.4s  forwards fadeIn;
+}
+
+.skills4 img {
+  padding : 20px;
+}
+
+.skills4 p {
+  font-size: 20px;
+  position: absolute;
+  left: 540px;
+}
+
+.content3 {
+  font-size: 20px;
+  position:absolute;
+  left: 210px;
+  top: 100px;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(1300px);
+    opacity: 1;
+  }
+}
+
+.footer p {
+  text-align: center;
+}
+
+.footer a {
+  color: #999;
+  text-decoration: none;
+}
+
+.footer ul {
+  position: absolute;
+  left: 490px;
+  display: flex;
+  gap: 80px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer {
+  padding: 2px;
+  font-size: 15px;
+  color: #999;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer a:hover {
+  color: #000;
+}

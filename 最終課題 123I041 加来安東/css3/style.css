@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+
+body {
+  font-family: 'Arial', YuGothic, 'Yu Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'ＭＳゴシック', sans-serif;
+}
+
+.my {
+  position: absolute;
+  top: 300px;
+  left: 880px;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 1em;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 2em;
+  border: 4px double black;
+  border-radius: 15px;
+  text-align: center;
+  color: black;
+  background: #ccc;
+}
+
+.first p {
+  border-bottom: dashed 2px #238264;
+  margin-bottom: 80px;
+  margin-top: -6px;
+}
+
+.breadcrumb {
+  list-style-type: none;
+  margin-left: 26px;
+  padding: 0px;
+  display: flex;
+  position: absolute;
+  top: 102px;
+}
+
+.breadcrumb li::after {
+  content: ">";
+  margin: 0 10px;
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+.move2 {
+  position: absolute;
+  left:120px;
+  margin: 100px auto;
+  width: 500px;
+}
+
+.introduce {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.introduce li a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  padding: 12px 10px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px 4px 0 0;
+  font-size: 16px;
+}
+
+.introduce li a.active {
+  background: #333;
+  color: #fff;
+}
+
+.introduce li a:not(.active):hover {
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+
+.content.active {
+  background: #333;
+  color: #fff;
+  min-height: 150px;
+  min-width: 600px;
+  padding: 12px;
+  display: block;
+}
+
+.content {
+  display: none;
+}
+
+.footer {
+  position: relative;
+  top: 800px;
+}
+ 
+.footer p {
+  text-align: center;
+}
+
+.footer a {
+  color: #999;
+  text-decoration: none;
+}
+
+.footer ul {
+  position: absolute;
+  left: 490px;
+  display: flex;
+  gap: 80px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer {
+  padding: 2px;
+  font-size: 15px;
+  color: #999;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer a:hover {
+  color: #000;
+}
+
+
+
+dl {
+  margin: 0;
+  position: absolute;
+  top: 600px;
+  left: 110px;
+}
+
+dl > div {
+  margin-bottom: 20px;
+}
+
+dt {
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+dt::before {
+  content: 'Q. ';
+}
+
+dt::after {
+  content: '+';
+  position: absolute;
+  left: 620px;
+  transition: transform .3s;
+}
+
+dl > div.appear dt::after {
+  transform: rotate(45deg);
+}
+
+dd {
+  padding: 8px;
+  margin: 0;
+  display: none;
+}
+
+dd::before {
+  content: 'A .';
+}
+
+dl > div.appear dd {
+  display: block;
+  animation: .3s fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
